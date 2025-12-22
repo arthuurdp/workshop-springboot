@@ -18,14 +18,14 @@ public class OrderResource {
     private OrderService orderService;
 
     @GetMapping
-    public ResponseEntity<Order> findById(@PathVariable Long id){
-        Order order = orderService.findById(id);
-        return ResponseEntity.ok().body(order);
-    }
-
-    @GetMapping(value = "/{id}")
     public ResponseEntity<List<Order>> findAll() {
         List<Order> list = orderService.findAll();
         return ResponseEntity.ok().body(list);
+    }
+
+    @GetMapping(value = "/{id}")
+    public ResponseEntity<Order> findById(@PathVariable Long id){
+        Order order = orderService.findById(id);
+        return ResponseEntity.ok().body(order);
     }
 }
