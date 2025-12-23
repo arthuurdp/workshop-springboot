@@ -4,10 +4,7 @@ import com.example.course.entities.Product;
 import com.example.course.services.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -27,5 +24,17 @@ public class ProductResource {
     public ResponseEntity<Product> findById(@PathVariable Long id) {
         Product p = service.findById(id);
         return ResponseEntity.ok().body(p);
+    }
+
+    @PostMapping(value = "/insert")
+    public ResponseEntity<Product> insert(@RequestBody Product product) {
+        service.insert(product);
+        return ResponseEntity.ok().body(product);
+    }
+
+    @GetMapping(value = "/delete/{id}")
+    public ResponseEntity<Product> removeById(@PathVariable Long id) {
+        service.deleteById(id);
+        return ResponseEntity.noContent().build();
     }
 }

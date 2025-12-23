@@ -28,6 +28,9 @@ public class Order implements Serializable {
     @JoinColumn(name = "client_id")
     private User client;
 
+    @OneToOne(mappedBy = "order", cascade = CascadeType.ALL)
+    private Payment payment;
+
     private Integer orderStatus;
 
     @OneToMany(mappedBy = "id.order")
@@ -75,12 +78,24 @@ public class Order implements Serializable {
         this.orderStatus = orderStatus.getCode();
     }
 
+    public Payment getPayment() {
+        return payment;
+    }
+
+    public void setPayment(Payment payment) {
+        this.payment = payment;
+    }
+
     public Set<OrderItem> getItems() {
         return items;
     }
 
     public void setItems(Set<OrderItem> items) {
         this.items = items;
+    }
+
+    public double getTotal() {
+        return items.stream().mapToDouble(OrderItem::getSubTotal).sum();
     }
 
     @Override
