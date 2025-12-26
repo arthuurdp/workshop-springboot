@@ -3,11 +3,8 @@ package com.example.course.config;
 import com.example.course.entities.*;
 import com.example.course.entities.enums.OrderStatus;
 import com.example.course.repositories.*;
-import com.example.course.services.OrderService;
-import com.example.course.services.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.boot.autoconfigure.AutoConfigureOrder;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 
@@ -15,7 +12,7 @@ import java.time.Instant;
 import java.util.Arrays;
 
 @Configuration
-@Profile("test")
+@Profile({"test", "dev"})
 public class TestConfig implements CommandLineRunner {
     @Autowired
     private UserRepository userRepository;
