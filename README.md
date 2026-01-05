@@ -37,9 +37,3 @@ Learning how to maintain different configurations for different stages of develo
 - Use of **Domain-Driven Design** basics for entity modeling.
 - **Encapsulation** and proper Java syntax.
 - **Standard RESTful principles**: Using correct HTTP methods (GET, POST, PUT, DELETE) and status codes.
-
-- ## Author
-
-**Arthur Dall Agnol Pinheiro**
-* Estudante de Análise e Desenvolvimento de Sistemas,  UPF - Passo Fundo.
-* [LinkedIn](https://www.linkedin.com/in/arthur-dall-agnol-pinheiro-b04285357/)
