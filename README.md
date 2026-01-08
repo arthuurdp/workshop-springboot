@@ -37,3 +37,10 @@ Learning how to maintain different configurations for different stages of develo
 - Use of **Domain-Driven Design** basics for entity modeling.
 - **Encapsulation** and proper Java syntax.
 - **Standard RESTful principles**: Using correct HTTP methods (GET, POST, PUT, DELETE) and status codes.
+
+### Domain Model:
+<img width="1123" height="554" alt="image" src="https://github.com/user-attachments/assets/542b9108-dad8-4714-a855-2d72ab348d7c" />
+
+### Domain Instance:
+<img width="1119" height="666" alt="image" src="https://github.com/user-attachments/assets/ff130023-5242-475b-9cb4-3803d14b900a" />
+
