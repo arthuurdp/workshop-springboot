@@ -1,4 +1,4 @@
-# Workshop Spring Boot + JPA
+# API Restful Spring Boot + JPA
 
 This project is a Spring Boot application developed for educational purposes, focusing on building a backend system with JPA/Hibernate, layered architecture, and database management.
 
